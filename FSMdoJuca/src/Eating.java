@@ -1,15 +1,22 @@
-public class Eating implements State
+public class Eating extends AbstractState
 {
+    public Eating(Juca juca)
+    {
+        super(juca);
+    }
+
     @Override
     public void enter()
     {
-        System.out.println("Bateu uma fome...");
+
     }
 
     @Override
     public void execute()
-    {   
-
+    {
+        juca.hunger += 5;
+        System.out.println("Comendo...");
+        printStats();
     }
 
     @Override
