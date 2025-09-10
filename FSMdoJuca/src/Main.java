@@ -47,7 +47,7 @@ public class Main
     public static void eat()
     {
         hunger -= 5;
-        if (hunger > 0)
+        if (hunger < 0)
         {
             hunger = 0;
         }
@@ -57,5 +57,9 @@ public class Main
     {
         hunger += 1;
         fatigue -= 10;
+        if (fatigue < 0)
+        {
+            fatigue = 0;
+        }
     }
 }
