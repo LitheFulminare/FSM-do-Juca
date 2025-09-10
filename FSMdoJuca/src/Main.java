@@ -12,7 +12,7 @@ public class Main
     static int hunger = 0;
     static int fatigue = 0;
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
         boolean isLoopActive = true;
 
         while(isLoopActive)
@@ -21,7 +21,7 @@ public class Main
         }
     }
 
-    public static void checkState(States state) throws InterruptedException {
+    public static void checkState(States state) {
         switch (state)
         {
             case WORKING:
@@ -35,7 +35,8 @@ public class Main
                 break;
         }
 
-        Thread.sleep(1000);
+        try { Thread.sleep(1000); }
+        catch (InterruptedException e) { throw new RuntimeException(e); }
     }
 
     public static void work()
