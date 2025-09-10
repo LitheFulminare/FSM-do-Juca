@@ -8,7 +8,7 @@ public class Eating extends AbstractState
     @Override
     public void enter()
     {
-
+        System.out.println("Bateu uma fome...");
     }
 
     @Override
@@ -22,6 +22,6 @@ public class Eating extends AbstractState
     @Override
     public void leave()
     {
-
+        System.out.println("Ufa! Já estou cheio...");
     }
 }
