@@ -9,7 +9,7 @@ public abstract class AbstractState implements State
 
     public void printStats()
     {
-        System.out.println("Fome: " + juca.hunger);
-        System.out.println("Cansaço: " + juca.fatigue);
+        System.out.println("Fome: " + juca.getHunger());
+        System.out.println("Cansaço: " + juca.getFatigue());
     }
 }
