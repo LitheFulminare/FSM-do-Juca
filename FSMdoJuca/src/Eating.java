@@ -15,8 +15,13 @@ public class Eating extends AbstractState
     public void execute()
     {
         juca.decreaseHunger(5);
-        System.out.println("Comendo...");
+        System.out.println("\nComendo...");
         printStats();
+
+        if (juca.getHunger() == 0)
+        {
+            juca.updateState(new Working(juca));
+        }
     }
 
     @Override

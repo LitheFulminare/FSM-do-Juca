@@ -8,7 +8,7 @@ public class Sleeping extends  AbstractState
     @Override
     public void enter()
     {
-        System.out.println("Bateu um sono...");
+        System.out.println("\nBateu um sono...");
     }
 
     @Override
@@ -16,8 +16,19 @@ public class Sleeping extends  AbstractState
     {
         juca.increaseHuger(1);
         juca.decreaseFatigue(10);
-        System.out.println("Dormindo...");
+        System.out.println("\nDormindo...");
         printStats();
+
+        if (juca.getFatigue() > 0) return;
+
+        if (juca.getHunger() <= 10)
+        {
+            juca.updateState(new Working(juca));
+        }
+        else
+        {
+            juca.updateState(new Eating(juca));
+        }
     }
 
     @Override
