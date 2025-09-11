@@ -1,6 +1,6 @@
 public class Juca
 {
-    private AbstractState currentState = new Eating(this);
+    AbstractState currentState = new Working(this);
 
     private int hunger = 0;
     private int fatigue = 0;
@@ -8,6 +8,13 @@ public class Juca
     public void doAction()
     {
         currentState.execute();
+    }
+
+    public void updateState(AbstractState newState)
+    {
+        currentState.leave();
+        currentState = newState;
+        currentState.enter();
     }
 
     public int getHunger()
