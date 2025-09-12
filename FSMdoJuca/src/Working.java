@@ -16,8 +16,7 @@ public class Working extends AbstractState
     {
         juca.increaseHuger(2);
         juca.increaseFatigue(5);
-        System.out.println("\nTrabalhando...");
-        printStats();
+        printStats("\nTrabalhando...");
 
         if (juca.getFatigue() > 50)
         {
@@ -27,11 +26,5 @@ public class Working extends AbstractState
         {
             juca.updateState(new Eating(juca));
         }
-    }
-
-    @Override
-    public void leave()
-    {
-
     }
 }

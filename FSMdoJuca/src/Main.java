@@ -4,8 +4,7 @@ public class Main
     {
         Juca juca = new Juca();
 
-        boolean isLoopActive = true;
-        while(isLoopActive)
+        while(true)
         {
             juca.doAction();
 

@@ -30,34 +30,18 @@ public class Juca
     public void increaseHuger(int value)
     {
         hunger += value;
-    }
-
-    public boolean decreaseHunger(int value)
-    {
-        hunger -= value;
         if (hunger < 0)
         {
             hunger = 0;
-            return false;
         }
-
-        return true;
     }
 
     public void increaseFatigue(int value)
     {
         fatigue += value;
-    }
-
-    public boolean decreaseFatigue(int value)
-    {
-        fatigue -= value;
         if (fatigue < 0)
         {
             fatigue = 0;
-            return false;
         }
-
-        return true;
     }
 }
