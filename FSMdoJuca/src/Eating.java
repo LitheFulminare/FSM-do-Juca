@@ -15,7 +15,7 @@ public class Eating extends AbstractState
     public void execute()
     {
         juca.increaseHuger(-5);
-        printStats("\nComendo...");
+        juca.printStats("\nComendo...");
 
         if (juca.getHunger() == 0)
         {

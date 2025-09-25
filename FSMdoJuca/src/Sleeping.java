@@ -16,7 +16,7 @@ public class Sleeping extends  AbstractState
     {
         juca.increaseHuger(1);
         juca.increaseFatigue(-10);
-        printStats("\nDormindo...");
+        juca.printStats("\nDormindo...");
 
         if (juca.getFatigue() > 0) return;
 

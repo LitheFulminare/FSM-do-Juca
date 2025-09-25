@@ -6,7 +6,7 @@ public class Main
 
         while(true)
         {
-            juca.doAction();
+            juca.update();
 
             Thread.sleep(1000);
         }

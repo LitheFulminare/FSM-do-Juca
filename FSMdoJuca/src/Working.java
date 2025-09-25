@@ -16,7 +16,7 @@ public class Working extends AbstractState
     {
         juca.increaseHuger(2);
         juca.increaseFatigue(5);
-        printStats("\nTrabalhando...");
+        juca.printStats("\nTrabalhando...");
 
         if (juca.getFatigue() > 50)
         {
