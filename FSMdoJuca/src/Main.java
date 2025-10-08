@@ -11,9 +11,9 @@ public class Main
 
         while(true)
         {
-            for (int i = 0; i < characters.size(); i++)
+            for (Character character : characters)
             {
-                characters.get(i).update();
+                character.update();
             }
 
             Thread.sleep(1000);

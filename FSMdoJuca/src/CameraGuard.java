@@ -2,6 +2,8 @@ public class CameraGuard implements Character
 {
     AbstractState currentState = new InspectingCameraA(this);
 
+    private int cameraCheckCount = 0;
+
     public void update()
     {
         currentState.execute();
@@ -17,7 +19,21 @@ public class CameraGuard implements Character
     public void printStats(String currentStateMessage)
     {
         System.out.println(currentStateMessage);
-        //System.out.println("Fome: " + hunger);
-        //System.out.println("Cansaço: " + fatigue);
+        System.out.println("Vezes que checou câmera: " + cameraCheckCount);
+    }
+
+    public int getCameraCheckCount()
+    {
+        return cameraCheckCount;
+    }
+
+    public void increaseCameraCheckCount()
+    {
+        cameraCheckCount++;
+    }
+
+    public void resetCameraCheckCount()
+    {
+        cameraCheckCount = 0;
     }
 }

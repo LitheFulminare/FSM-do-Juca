@@ -1,6 +1,6 @@
-public class InspectingCameraA extends AbstractState<CameraGuard>
+public class InspectingCameraB extends AbstractState<CameraGuard>
 {
-    public InspectingCameraA(CameraGuard cameraGuard)
+    public InspectingCameraB(CameraGuard cameraGuard)
     {
         super(cameraGuard);
     }
@@ -8,7 +8,7 @@ public class InspectingCameraA extends AbstractState<CameraGuard>
     @Override
     public void enter()
     {
-        System.out.println("\nMudando para a câmera A");
+        System.out.println("\nMudando para a câmera B");
     }
 
     @Override
@@ -16,12 +16,12 @@ public class InspectingCameraA extends AbstractState<CameraGuard>
     {
         character.increaseCameraCheckCount();
 
-        character.printStats("Inspecionando Camera A");
+        character.printStats("Inspecionando Camera B");
 
         if (character.getCameraCheckCount() == 3)
         {
             character.resetCameraCheckCount();
-            character.updateState(new InspectingCameraB(character));
+            character.updateState(new InspectingCameraA(character));
         }
     }
 }
