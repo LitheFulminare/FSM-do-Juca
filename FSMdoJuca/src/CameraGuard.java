@@ -6,6 +6,7 @@ public class CameraGuard implements Character
 
     public void update()
     {
+        System.out.println("\n--- update do CameraGuard ---");
         currentState.execute();
     }
 

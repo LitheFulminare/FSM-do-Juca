@@ -9,6 +9,9 @@ public class Main
         CameraGuard cameraGuard = new CameraGuard();
         characters.add(cameraGuard);
 
+        PatrolGuard patrolGuard = new PatrolGuard();
+        characters.add(patrolGuard);
+
         while(true)
         {
             for (Character character : characters)
@@ -16,7 +19,7 @@ public class Main
                 character.update();
             }
 
-            Thread.sleep(1000);
+            Thread.sleep(3000);
         }
     }
 }
