@@ -1,8 +1,8 @@
-public class Working extends AbstractState
+public class Working extends AbstractState<CameraGuard>
 {
-    public Working(Juca juca)
+    public Working(CameraGuard cameraGuard)
     {
-        super(juca);
+        super(cameraGuard);
     }
 
     @Override
@@ -14,17 +14,17 @@ public class Working extends AbstractState
     @Override
     public void execute()
     {
-        juca.increaseHuger(2);
-        juca.increaseFatigue(5);
-        juca.printStats("\nTrabalhando...");
+        character.increaseHuger(2);
+        character.increaseFatigue(5);
+        character.printStats("\nTrabalhando...");
 
-        if (juca.getFatigue() > 50)
+        if (character.getFatigue() > 50)
         {
-            juca.updateState(new Sleeping(juca));
+            character.updateState(new Sleeping(character));
         }
-        else if (juca.getHunger() > 10)
+        else if (character.getHunger() > 10)
         {
-            juca.updateState(new Eating(juca));
+            character.updateState(new Eating(character));
         }
     }
 }

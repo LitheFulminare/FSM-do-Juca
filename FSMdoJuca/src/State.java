@@ -1,4 +1,4 @@
-public interface State
+public interface State<C>
 {
     void enter();
     void execute();

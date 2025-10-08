@@ -1,10 +1,10 @@
-public abstract class AbstractState implements State
+public abstract class AbstractState<C> implements State<C>
 {
-    protected Juca juca;
+    protected C character;
 
-    public AbstractState(Juca juca)
+    public AbstractState(C character)
     {
-        this.juca = juca;
+        this.character = character;
     }
 
     public void enter()

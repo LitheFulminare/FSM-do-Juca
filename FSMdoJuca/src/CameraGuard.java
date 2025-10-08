@@ -1,4 +1,4 @@
-public class Juca implements Character
+public class CameraGuard implements Character
 {
     AbstractState currentState = new Working(this);
 

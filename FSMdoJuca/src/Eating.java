@@ -1,8 +1,8 @@
-public class Eating extends AbstractState
+public class Eating extends AbstractState<CameraGuard>
 {
-    public Eating(Juca juca)
+    public Eating(CameraGuard cameraGuard)
     {
-        super(juca);
+        super(cameraGuard);
     }
 
     @Override
@@ -14,12 +14,12 @@ public class Eating extends AbstractState
     @Override
     public void execute()
     {
-        juca.increaseHuger(-5);
-        juca.printStats("\nComendo...");
+        character.increaseHuger(-5);
+        character.printStats("\nComendo...");
 
-        if (juca.getHunger() == 0)
+        if (character.getHunger() == 0)
         {
-            juca.updateState(new Working(juca));
+            character.updateState(new Working(character));
         }
     }
 

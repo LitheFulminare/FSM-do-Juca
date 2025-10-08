@@ -1,8 +1,8 @@
-public class Sleeping extends  AbstractState
+public class Sleeping extends AbstractState<CameraGuard>
 {
-    public Sleeping(Juca juca)
+    public Sleeping(CameraGuard cameraGuard)
     {
-        super(juca);
+        super(cameraGuard);
     }
 
     @Override
@@ -14,19 +14,19 @@ public class Sleeping extends  AbstractState
     @Override
     public void execute()
     {
-        juca.increaseHuger(1);
-        juca.increaseFatigue(-10);
-        juca.printStats("\nDormindo...");
+        character.increaseHuger(1);
+        character.increaseFatigue(-10);
+        character.printStats("\nDormindo...");
 
-        if (juca.getFatigue() > 0) return;
+        if (character.getFatigue() > 0) return;
 
-        if (juca.getHunger() <= 10)
+        if (character.getHunger() <= 10)
         {
-            juca.updateState(new Working(juca));
+            character.updateState(new Working(character));
         }
         else
         {
-            juca.updateState(new Eating(juca));
+            character.updateState(new Eating(character));
         }
     }
 }
