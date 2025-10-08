@@ -14,13 +14,7 @@ public class Eating extends AbstractState<CameraGuard>
     @Override
     public void execute()
     {
-        character.increaseHuger(-5);
         character.printStats("\nComendo...");
-
-        if (character.getHunger() == 0)
-        {
-            character.updateState(new Working(character));
-        }
     }
 
     @Override
