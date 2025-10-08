@@ -13,7 +13,7 @@ public class InspectingAreaC extends AbstractState<PatrolGuard>
         if (character.isReturningToEntrance)
         {
             character.isReturningToEntrance = false;
-            character.isGoingToAreaC = true;
+            character.isGoingToAreaB = true;
             character.updateState(new InspectingEntrance(character));
         }
         else
