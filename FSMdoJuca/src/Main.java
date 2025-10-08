@@ -19,7 +19,7 @@ public class Main
                 character.update();
             }
 
-            Thread.sleep(3000);
+            Thread.sleep(2000);
         }
     }
 }

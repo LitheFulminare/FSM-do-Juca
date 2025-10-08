@@ -10,7 +10,7 @@ public class InspectingAreaA extends AbstractState<PatrolGuard>
     {
         character.printStats("Inspecionando a area A");
 
-        if (character.isGoingRight)
+        if (character.isGoingToAreaC)
         {
             character.updateState(new InspectingAreaB(character));
         }

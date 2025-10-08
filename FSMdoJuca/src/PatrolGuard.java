@@ -4,7 +4,7 @@ public class PatrolGuard implements Character
 
     //private int timesChecked = 0;
 
-    protected boolean isGoingRight = true;
+    protected boolean isGoingToAreaC = true;
     protected boolean isReturningToEntrance = false;
 
     @Override
