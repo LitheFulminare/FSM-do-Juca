@@ -25,7 +25,7 @@ Versão original da FSM do Juca usando switches e enumerators para controle da m
 
 ### Como rodar e baixar
 
-Todos os 3 programas foram desenvolvidos usando Java 24. Os arquivos necessários estão em FSM/src. Compile o código e rode o arquivo main.java
+Todos os 3 programas foram desenvolvidos usando Java. Os arquivos necessários estão em FSM/src. Compile o código e rode o arquivo main.java
 
 O output no console reflete o que cada agente está fazendo no momento e o valor atual das variáveis que controlam a transição entre os estados
 
