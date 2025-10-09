@@ -37,7 +37,7 @@ O programa simula o comportamento de dois guardas patrulhando um determinado loc
 O PatrolGuard tem como rota ir da Entrada para a Área B, retornar para a Entrada, depois ir para a Área D. Então repete.
 
 ## Agente Camera Guard
-O CameraGuard altera entre estar checando entre a Câmera A e a Câmera B, cada estado durando três "ticks" ou chamadas do método update()
+O CameraGuard altera entre checar a Câmera A e a Câmera B, cada estado durando três "ticks" ou chamadas do método update()
 
 ## Estrutura do código
 
